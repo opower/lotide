@@ -41,4 +41,5 @@ const letterPositions = str => {
 }
 
 assertArraysEqual(letterPositions('hello').e, [1]);
-assertArraysEqual(letterPositions('helloo').o, [4,5]);
+assertArraysEqual(letterPositions('lighthouse h').h, [3,5, 11]);
+assertArraysEqual(letterPositions('hello o').o, [4,6]);
