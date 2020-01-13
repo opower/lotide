@@ -23,7 +23,4 @@ const countLetters = str => {
   return results;
 }
 
-const results = countLetters('lighthouse');
-
-assertEqual(results['l'],1);
-assertEqual(results['h'],2);
+module.exports = countLetters;

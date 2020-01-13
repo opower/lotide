@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@opower00/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A collection of functions based on Lodash",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/opower/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Olivia Power @opower",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/opower/lotide/issues"

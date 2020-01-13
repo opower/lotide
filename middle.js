@@ -1,20 +1,20 @@
-const middle = arr => {
+const middle = array => {
 
   let middle = [];
 
-  if (arr.length <= 2) {
+  if (array.length <= 2) {
     return middle;
   }
 
-  if (arr.length % 2 !== 0) {
-    let mid = Math.floor(arr.length / 2);
-    middle.push(arr[mid]);
+  if (array.length % 2 !== 0) {
+    let mid = Math.floor(array.length / 2);
+    middle.push(array[mid]);
     return middle;
   } else {
-    let mid1 = arr.length / 2;
+    let mid1 = array.length / 2;
     let mid = mid1 - 1;
-    middle.push(arr[mid]);
-    middle.push(arr[mid1]);
+    middle.push(array[mid]);
+    middle.push(array[mid1]);
     return middle;
   }
   
