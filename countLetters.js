@@ -20,8 +20,6 @@ const countLetters = str => {
       results[i] = 1;
     }
   }
-
-  console.log(results);
   return results;
 }
 
