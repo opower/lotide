@@ -19,7 +19,6 @@ const middle = arr => {
     let mid = mid1 - 1;
     middle.push(arr[mid]);
     middle.push(arr[mid1]);
-    console.log(middle);
     return middle;
   }
   
