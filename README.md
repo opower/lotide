@@ -38,3 +38,5 @@ The following functions are currently implemented:
 * `letterPositions(str)`: returns an object that contains the indices of all the letters in the string
 * `map(array, callback)`: returns an array where each item is passed through the callback function
 * `takeUntil(array,callback)`: returns an array where each item is passed through the callback function until the callback returns true
+* `eqArrays(a1,a2)`: returns true is two arrays are equal and false if not equl
+* `eqObject(obj1, obj2)`: returns if two objects are equal or not
