@@ -1,22 +1,18 @@
 const eqArrays = (a1, a2) => {
 
-  if(a1.length != a2.length){
+  if (a1.length !== a2.length) {
     return false;
   }
-  for(const i in a1){
-    if(Array.isArray(a1[i])){
+  for (const i in a1) {
+    if (Array.isArray(a1[i])) {
       let value = eqArrays(a1[i], a2[i]);
-      if(!value){
+      if (!value) {
         return false;
       }
-    }
-    else if (a1[i] !== a2[i]){
+    } else if (a1[i] !== a2[i]) {
       return false;
     }
   }
   return true;
-}
+};
 module.exports = eqArrays;
-console.log(eqArrays([[2, 3], [4]], [[2, 3], [4]])) // => true
-console.log(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]])) // => false
-console.log(eqArrays([[2, 3], [4]], [[2, 3], 4])) // => false
