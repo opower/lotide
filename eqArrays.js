@@ -3,14 +3,20 @@ const eqArrays = (a1, a2) => {
   if(a1.length != a2.length){
     return false;
   }
-  else{
-    for(let i = 0; i < a1.length; i++){
-      if(a1[i] != a2[i]){
+  for(const i in a1){
+    if(Array.isArray(a1[i])){
+      let value = eqArrays(a1[i], a2[i]);
+      if(!value){
         return false;
       }
     }
-    return true;
+    else if (a1[i] !== a2[i]){
+      return false;
+    }
   }
-
+  return true;
 }
 module.exports = eqArrays;
+console.log(eqArrays([[2, 3], [4]], [[2, 3], [4]])) // => true
+console.log(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]])) // => false
+console.log(eqArrays([[2, 3], [4]], [[2, 3], 4])) // => false

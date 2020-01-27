@@ -3,25 +3,26 @@ const eqObjects = (obj1, obj2) => {
 
   let keys1 = Object.keys(obj1);
   let keys2 = Object.keys(obj2);
-  console.log(keys1);
 
   if (keys1.length !== keys2.length) {
     return false;
   }
 
   for (const i of keys1) {
-    if(typeof(obj1[i]) === 'object' || !Array.isArray(obj[i]) || obj[i] !== null)
-    if (Array.isArray(obj1[i]) && Array.isArray(obj2[i])) {
-      if (!eqArrays(obj1[i], obj2[i])) {
-        return false;
-      }
-    } else {
-      if (obj1[i] !== obj2[i]) {
-        return false;
-      }
+    if(typeof(obj1[i]) === 'object' && !Array.isArray(obj1[i])){
+
+      let x = eqArrays(obj1[i], obj2[i]);
+      console.log(x)
+
+    } else if (obj1[i] === obj2[i]) {
+        return true;
     }
   }
-  return true;
+  return false;
 
 };
 module.exports = eqObjects;
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })) // => true
+
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })) // => false
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })) 
